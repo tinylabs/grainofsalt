@@ -294,8 +294,11 @@ start:
 	T[1] = (pcube) Tsave;
 
 	if (debug & TAUT) {
-	    printf("UNATE_REDUCTION: %d unate variables, reduced to %d\n",
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat"
+	    printf("UNATE_REDUCTION: %ld unate variables, reduced to %ld\n",
 		cdata.vars_unate, CUBELISTSIZE(T));
+#pragma GCC diagnostic pop
 	}
 	goto start;
 
@@ -420,8 +423,11 @@ start:
 	T[1] = (pcube) Tsave;
 
 	if (debug & TAUT) {
-	    printf("UNATE_REDUCTION: %d unate variables, reduced to %d\n",
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wformat"
+	    printf("UNATE_REDUCTION: %ld unate variables, reduced to %ld\n",
 		cdata.vars_unate, CUBELISTSIZE(T));
+#pragma GCC diagnostic pop
 	}
 	goto start;
     }

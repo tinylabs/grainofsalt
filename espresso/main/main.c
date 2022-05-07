@@ -14,7 +14,11 @@
 static FILE *last_fp;
 static int input_type = FD_type;
 
-minimise_karnaugh(int no_inputs, int no_outputs, int** input, int** output, int* no_lines, bool onlymerge)
+/* Forward dclarations */
+void getPLA(int opt, int option, pPLA *PLA, int out_type, int no_inputs, int no_outputs, int **input, int **output, int *no_lines);
+void init_runtime(void);
+
+void minimise_karnaugh(int no_inputs, int no_outputs, int** input, int** output, int* no_lines, bool onlymerge)
 {
 	int i, j, first, last, strategy, out_type, option;
 	pPLA PLA, PLA1;
@@ -121,7 +125,8 @@ minimise_karnaugh(int no_inputs, int no_outputs, int** input, int** output, int*
 }
 
 
-getPLA(opt, option, PLA, out_type, no_inputs, no_outputs, input, output, no_lines)
+void getPLA(int opt, int option, pPLA *PLA, int out_type, int no_inputs, int no_outputs, int **input, int **output, int *no_lines)
+/*
 int opt;
 int option;
 pPLA *PLA;
@@ -131,6 +136,7 @@ int no_outputs;
 int** input;
 int** output;
 int* no_lines;
+*/
 {
     FILE *fp;
     int needs_dcset, needs_offset;
@@ -148,7 +154,7 @@ int* no_lines;
 }
 
 
-init_runtime()
+void init_runtime(void)
 {
     total_name[READ_TIME] =     "READ       ";
     total_name[WRITE_TIME] =    "WRITE      ";

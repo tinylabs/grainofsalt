@@ -349,7 +349,7 @@ pcube *A1;
     return A;
 }
 
-simplify_cubelist(T)
+void simplify_cubelist(T)
 pcube *T;
 {
     register pcube *Tdest;

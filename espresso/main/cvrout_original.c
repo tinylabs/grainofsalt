@@ -432,7 +432,7 @@ pPLA PLA;
 }
 
 
-kiss_output(fp, PLA)
+void kiss_output(fp, PLA)
 FILE *fp;
 pPLA PLA;
 {
@@ -447,7 +447,7 @@ pPLA PLA;
 }
 
 
-kiss_print_cube(fp, PLA, p, out_string)
+void kiss_print_cube(fp, PLA, p, out_string)
 FILE *fp;
 pPLA PLA;
 pcube p;
@@ -494,7 +494,7 @@ char *out_string;
     putc('\n', fp);
 }
 
-output_symbolic_constraints(fp, PLA, output_symbolic)
+void output_symbolic_constraints(fp, PLA, output_symbolic)
 FILE *fp;
 pPLA PLA;
 int output_symbolic;

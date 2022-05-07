@@ -436,6 +436,8 @@ FILE *fp;
     register pset p, last;
     pset_family A;
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-result"
     (void) fscanf(fp, "%d %d\n", &i, &j);
     A = sf_new(i, j);
     A->count = i;
@@ -444,6 +446,7 @@ FILE *fp;
 	for(j = 1; j <= LOOP(p); j++)
 	    (void) fscanf(fp, "%x", p+j);
     }
+#pragma GCC diagnostic pop
     return A;
 }
 
@@ -472,7 +475,10 @@ FILE *fp;
     register pset pdest;
     pset_family A;
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-result"
     (void) fscanf(fp, "%d %d\n", &rows, &cols);
+#pragma GCC diagnostic pop
     A = sf_new(rows, cols);
     for(i = 0; i < rows; i++) {
 	pdest = GETSET(A, A->count++);

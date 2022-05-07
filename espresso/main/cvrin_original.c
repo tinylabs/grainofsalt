@@ -35,6 +35,9 @@ register char *word;
     return word;
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-result"
+
 /*
  *  Yes, I know this routine is a mess
  */
@@ -432,6 +435,8 @@ fatal("num_binary_vars (second field of .mv) cannot be negative");
     }
     goto loop;
 }
+#pragma GCC diagnostic pop
+
 /*
     read_pla -- read a PLA from a file
 
@@ -641,7 +646,7 @@ pPLA new_PLA()
 }
 
 
-PLA_labels(PLA)
+void PLA_labels(PLA)
 pPLA PLA;
 {
     int i;

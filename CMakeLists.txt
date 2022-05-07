@@ -5,9 +5,9 @@ SET(CMAKE_BUILD_TYPE ${MY_BUILD_TYPE} CACHE STRING "..." FORCE)
 MARK_AS_ADVANCED(CMAKE_BUILD_TYPE )
 
 PROJECT(grainofsalt)
-SET(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O3 -Wall -ggdb -mtune=native  -Wno-deprecated")
-SET(CMAKE_CXX_FLAGS_DEBUG "-Wall -O0 -ggdb -Wno-deprecated")
-SET(CMAKE_CXX_FLAGS_RELEASE "-O3 -mtune=native -Wno-deprecated")
+SET(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O3 -Wall -ggdb -mtune=native  -Wno-deprecated -Wno-reorder -Wno-register")
+SET(CMAKE_CXX_FLAGS_DEBUG "-Wall -O0 -ggdb -Wno-deprecated -Wno-reorder -Wno-register")
+SET(CMAKE_CXX_FLAGS_RELEASE "-O3 -mtune=native -Wno-deprecated -Wno-reorder -Wno-register")
 
 #FIND_PACKAGE(Threads REQUIRED)
 #set(thread_library "${CMAKE_THREAD_LIBS_INIT}")

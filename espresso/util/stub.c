@@ -75,7 +75,7 @@ FILE *fp;
 #endif
 
 /* put something here in case some compilers abort on empty files ... */
-util_do_nothing()
+int util_do_nothing(void )
 {
     return 1;
 }

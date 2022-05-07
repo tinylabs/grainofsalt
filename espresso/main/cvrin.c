@@ -279,7 +279,7 @@ pPLA new_PLA()
 }
 
 
-PLA_labels(PLA)
+void PLA_labels(PLA)
 pPLA PLA;
 {
     int i;

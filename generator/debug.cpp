@@ -70,7 +70,7 @@ const string Debug::hexify(const vector<bool>& vec)
         for (int i2 = 0; i2 < 4; i2++)
             tmp |= ((uint)vec2[i+i2]) << (3-i2);
             
-            assert(tmp < 16);
+        assert(tmp < 16);
         ret += hex[tmp];
         i += 4;
     }
