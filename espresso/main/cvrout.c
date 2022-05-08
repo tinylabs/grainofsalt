@@ -5,9 +5,11 @@
 
 #include "espresso.h"
 
-void fprint_pla(PLA, output_type, input, output, no_lines)
+void fprint_pla(PLA, output_type, no_inputs, no_outputs, input, output, no_lines)
 IN pPLA PLA;
 IN int output_type;
+int no_inputs;
+int no_outputs;
 int** input;
 int** output;
 int* no_lines;
